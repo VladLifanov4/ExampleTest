@@ -1,0 +1,54 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Playwright test results and reports
+playwright-report/
+test-results/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.vscode/
+.idea/
+*.iml
+
+# Build output
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Coverage reports
+coverage/
+
+# Exclude JavaScript libraries and minified files
+*.min.js
+*.bundle.js
+*.map
+
+# Exclude Playwright-generated files
+playwright/.cache/
+playwright/.config/
+
+# Other
+*.zip
+*.tar.gz
