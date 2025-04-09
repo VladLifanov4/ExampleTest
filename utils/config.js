@@ -1,4 +1,1 @@
-module.exports = {
-    baseURL: 'https://example.com',
-    timeout: 5000,
-};
+export const baseURL = 'https://the-internet.herokuapp.com/';

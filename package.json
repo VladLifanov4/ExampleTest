@@ -2,6 +2,7 @@
   "name": "exampletest",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -9,7 +10,11 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "allure-playwright": "^3.2.1"
+  },
   "dependencies": {
-    "@playwright/test": "^1.51.1"
+    "@cucumber/cucumber": "^11.2.0"
   }
 }

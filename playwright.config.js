@@ -1,22 +1,25 @@
 const { defineConfig } = require('@playwright/test');
 
 module.exports = defineConfig({
-    testDir: './tests', // Папка с тестами
-    timeout: 30000, // Таймаут для каждого теста (30 секунд)
-    retries: 1, // Количество повторов при падении теста
+    testDir: './tests',
+    timeout: 30000,
+    retries: 1,
     use: {
-        baseURL: 'https://example.com', // Базовый URL для тестов
-        headless: true, // Запуск тестов в безголовом режиме
-        viewport: { width: 1280, height: 720 }, // Размер окна браузера
-        ignoreHTTPSErrors: true, // Игнорировать ошибки HTTPS
-        video: 'on-first-retry', // Запись видео при первом падении
-        screenshot: 'only-on-failure', // Скриншоты только при падении теста
+        baseURL: 'https://the-internet.herokuapp.com/',
+        headless: true,
+        viewport: { width: 1280, height: 720 },
+        ignoreHTTPSErrors: true,
+        screenshot: 'only-on-failure',
+        video: 'on-first-retry',
     },
+    reporter: [
+        ['list'], // Стандартный репортер
+        ['allure-playwright'], // Добавляем Allure репортер
+    ],
     projects: [
         {
             name: 'Chromium',
             use: { browserName: 'chromium' },
         }
     ],
-    reporter: [['html', { outputFolder: 'playwright-report' }]], // Генерация HTML-отчета
 });
