@@ -1,4 +1,4 @@
-export default class InternetPage {
+class InternetPage {
     constructor(page) {
         this.page = page;
     }
@@ -34,3 +34,5 @@ export default class InternetPage {
         return !cookies.some(cookie => cookie.name === name);
     }
 }
+
+module.exports = InternetPage;

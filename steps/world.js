@@ -1,17 +1,17 @@
-import { setWorldConstructor } from '@cucumber/cucumber';
-import { chromium } from 'playwright';
+const { setWorldConstructor } = require('@cucumber/cucumber');
+const { chromium } = require('playwright');
 
 class CustomWorld {
     async init() {
-        this.browser = await chromium.launch({ headless: true }); // Запуск браузера
-        this.context = await this.browser.newContext(); // Создание нового контекста
-        this.page = await this.context.newPage(); // Создание новой страницы
+        this.browser = await chromium.launch({ headless: true });
+        this.context = await this.browser.newContext();
+        this.page = await this.context.newPage();
     }
 
     async close() {
-        await this.page.close(); // Закрытие страницы
-        await this.context.close(); // Закрытие контекста
-        await this.browser.close(); // Закрытие браузера
+        await this.page.close();
+        await this.context.close();
+        await this.browser.close();
     }
 }
 
