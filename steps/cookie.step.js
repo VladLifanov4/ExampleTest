@@ -11,6 +11,7 @@ Given('I navigate to the base URL', async function () {
     page = testPage;
     internetPage = new InternetPage(page);
     await internetPage.navigateTo(baseURL);
+    this.a = "test"
 });
 
 Given('I set a cookie with name {string} and value {string}', async function (name, value) {
@@ -20,10 +21,6 @@ Given('I set a cookie with name {string} and value {string}', async function (na
 When('I check if the cookie with name {string} and value {string} exists', async function (name, value) {
     const cookieExists = await internetPage.isCookiesExists(name, value);
     expect(cookieExists).toBe(true);
-});
-
-Then('the cookie should exist', async function () {
-    // Проверка уже выполнена в предыдущем шаге
 });
 
 When('I delete the cookie with name {string}', async function (name) {
