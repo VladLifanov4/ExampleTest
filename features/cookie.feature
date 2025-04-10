@@ -3,7 +3,7 @@ Feature: Cookie Test
   Scenario: Check if cookie exists
     Given I navigate to the base URL
     When I set a cookie with name "testKey" and value "testValue"
-    Then I check if the cookie with name "testKey" and value "testValue" exist
+    Then I check if the cookie with name "testKey" and value "testValue" exists
 
   Scenario: Delete cookie and verify it's removed
     Given I navigate to the base URL
