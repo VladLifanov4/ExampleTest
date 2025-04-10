@@ -1,1 +1,4 @@
-export const baseURL = 'https://the-internet.herokuapp.com/';
+module.exports = {
+    baseURL: 'https://the-internet.herokuapp.com/',
+};
+//cjs
