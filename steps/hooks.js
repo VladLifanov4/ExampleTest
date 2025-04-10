@@ -1,4 +1,4 @@
-import { Before, After } from '@cucumber/cucumber';
+const { Before, After } = require('@cucumber/cucumber');
 
 Before(async function () {
     await this.init(); // Инициализация браузера, контекста и страницы

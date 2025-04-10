@@ -1,7 +1,7 @@
-import { Given, When, Then } from '@cucumber/cucumber';
-import { expect } from '@playwright/test';
-import { baseURL } from '../utils/config.js';
-import InternetPage from '../pages/InternetPage.js';
+const { Given, When, Then } = require('@cucumber/cucumber');
+const { expect } = require('@playwright/test');
+const { baseURL } = require('../utils/config.js');
+const InternetPage = require('../pages/InternetPage.js');
 
 let page;
 let internetPage;
